@@ -54,7 +54,8 @@ nav[aria-label="main-navigation"] ul li a:active {
 
 .sectionsBlog_article p,
 article>header time,
-article>footer div span {
+article>footer div span,
+.previousNext>button {
   font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 0.8rem;
@@ -145,4 +146,27 @@ article>footer div span {
 
 aside>img {
   width: 100%;
+}
+
+.previousNext {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.previousNext>button {
+  margin: 0 0.5rem;
+  padding: 5px 10px;
+  background-color: #9f9f9f;
+  color: #ffffff;
+  font-weight: 700!important;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.previousNext>button:hover,
+.previousNext>button:active {
+  background-color: var(--main-color);
 }
