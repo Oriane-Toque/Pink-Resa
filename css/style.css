@@ -170,3 +170,45 @@ aside>img {
 .previousNext>button:active {
   background-color: var(--main-color);
 }
+
+#mainFooter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding-top: 5px;
+  border-top: solid 1px var(--main-color);
+  font-family: var(--secondary-font);
+  font-size: 0.8rem;
+}
+
+#mainFooter p {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+nav[aria-label="footer-navigation"]>ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+nav[aria-label="footer-navigation"]>ul li {
+  padding: 0 1rem;
+}
+
+nav[aria-label="footer-navigation"]>ul li a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+nav[aria-label="footer-navigation"]>ul li a:hover {
+  text-decoration: underline;
+}
+
+#footerMentions {
+  font-size: 0.6rem;
+  font-weight: 400;
+}
