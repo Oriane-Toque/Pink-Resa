@@ -6,9 +6,11 @@
 
 :root {
   --bg-color: #ebeae7;
+  --bg-section-color: #ffffff;
   --main-color-nav: rgba(255, 255, 255, 0.8);
   --main-color: #634f42;
   --main-font: 'Drive', sans-serif;
+  --secondary-font: 'WeDrive', sans-serif;
 }
 
 body {
@@ -17,7 +19,7 @@ body {
   font-family: var(--main-font);
 }
 
-#mainHeader {
+header#mainHeader {
   display: flex;
   background-color: var(--main-color-nav);
 }
@@ -50,4 +52,97 @@ nav[aria-label="main-navigation"] ul li a:active {
   background-color: var(--main-color);
 }
 
+.sectionsBlog_article p,
+article>header time,
+article>footer div span {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
 
+article>header time,
+article>footer div span {
+  text-transform: uppercase;
+}
+
+section.sectionsBlog {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  margin: 1.5rem;
+  box-shadow: 4px -4px 3px -1px rgba(0,0,0,0.15);
+}
+
+.sectionsBlog_deco {
+  background-repeat: repeat-x;
+  height: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: -11px;
+}
+
+section:nth-child(odd)>.sectionsBlog_deco {
+  background-image: url('../images/blue-triangle.png');
+}
+
+section:nth-child(even)>.sectionsBlog_deco {
+  background-image: url('../images/pink-triangle.png');
+}
+
+article {
+  background-color: var(--bg-section-color);
+  padding: 1rem 1rem 5rem 1rem;
+  position: relative;
+}
+
+article>header {
+  text-align: right;
+}
+
+article>div.sectionsBlog_article {
+  margin: 3rem 0;
+  padding: 0 3rem;
+}
+
+.sectionsBlog_article h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sectionsBlog_article p {
+  line-height: 1.3rem;
+  margin: 0.2rem 0;
+}
+
+article>footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+article>footer div img {
+  background-color: #f0f0f0;
+  border-radius: 1rem;
+}
+
+article>footer div img,
+article>footer div span,
+aside {
+  cursor: pointer;
+}
+
+article>footer div span {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+}
+
+aside>img {
+  width: 100%;
+}
