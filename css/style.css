@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ebeae7;
+  --main-color-nav: rgba(255, 255, 255, 0.8);
+  --main-color: #634f42;
+  --main-font: 'Drive', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  font-family: var(--main-font);
+}
+
+#mainHeader {
+  display: flex;
+  background-color: var(--main-color-nav);
+}
+
+nav[aria-label="main-navigation"] {
+  width: 100%;
+}
+
+nav[aria-label="main-navigation"]>ul {
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+nav[aria-label="main-navigation"] ul li a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 10px 10px;
+  border-radius: 0.2rem;
+}
+
+nav[aria-label="main-navigation"] ul li a:hover,
+nav[aria-label="main-navigation"] ul li a:active {
+  color: var(--main-color-nav);
+  background-color: var(--main-color);
+}
+
+
